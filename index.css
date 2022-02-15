@@ -1,0 +1,273 @@
+
+
+/* Font-Family: 'Ruda', Sans-Serif;
+Font-Size: 48px;
+Font-Family: 'Roboto Slab', Serif;
+Font-Size: 16px; */
+
+main, footer {
+    margin: 1rem 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Ruda", Sans-Serif;
+    
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p,
+figcaption,
+a {
+    font-family: "Roboto Slab", Serif;
+    font-size: 16px;
+}
+
+/* Header */
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+nav {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    border-bottom: 2px solid black;
+
+    width: 100%;
+    height: 6rem;
+}
+
+.logo-name {
+    display: inline-flex;
+    align-items: center;
+}
+
+.name-motto {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-motto p {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+.nav-logo {
+    width: 6rem;
+    height: auto;
+}
+
+.nav-options {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-options > ul {
+    display: inline-flex;
+    gap: 1.25rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.nav-options > ul a {
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    color: #3f74dd;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.nav-options > ul a:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 890px)
+{
+    .name-motto p {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 660px)
+{
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+}
+
+/* Products */
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-header {
+    margin-top: 4rem;
+}
+
+.products-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product {
+    width: 30rem;
+    
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 1rem;
+    padding: 1rem;
+    
+    box-shadow: 0 20px 20px lightgrey;
+}
+
+.product > * {
+    flex-shrink: 2;
+}
+
+.product-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-bottom {
+    display: inline-flex;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+/* CSS */
+button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #26283d;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  font-weight: bold;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.product img {
+    width: 50%;
+    height: auto;
+}
+
+@media only screen and (max-width: 660px)
+{
+    .product-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Employees */
+
+.our-team {
+    margin: 10rem 3rem;
+    width: 100%;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.employee-card {
+    display: inline-flex;
+    align-items: center;
+    width: 25rem;
+    margin: 3rem;
+}
+
+.employee-card > p {
+    letter-spacing: 0.1rem;
+    margin-left: 1.5rem;
+}
+
+.employee-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.employee-figure img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-left: 0;
+}
+/* Footer */
