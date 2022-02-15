@@ -1,5 +1,8 @@
-main, footer {
+main {
     margin: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1,
@@ -146,10 +149,6 @@ article {
     box-shadow: 0 20px 20px lightgrey;
 }
 
-.product > * {
-    flex-shrink: 2;
-}
-
 .product-top {
     display: flex;
     flex-direction: column;
@@ -160,6 +159,11 @@ article {
     display: inline-flex;
     align-items: center;
     margin: 0.5rem;
+}
+
+.product img {
+    width: 50%;
+    height: auto;
 }
 
 /* CSS */
@@ -208,11 +212,6 @@ button:active {
   transform: translateY(2px);
 }
 
-.product img {
-    width: 50%;
-    height: auto;
-}
-
 @media only screen and (max-width: 660px)
 {
     .product-bottom {
@@ -220,34 +219,51 @@ button:active {
         flex-direction: column;
         align-items: center;
     }
+
+    .product {
+        box-shadow: none;
+    }
+
+    .product figcaption{
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
 }
 
 /* Employees */
 
 .our-team {
     margin: 10rem 3rem;
-    width: 80%;
+    width: 90%;
+}
+
+.our-team h2 {
+    margin-bottom: 2rem;
 }
 
 .team-members {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
+    gap: 3rem;
 }
 
 .employee-card {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
     width: 25rem;
-    margin: 3rem;
+    text-align: center;
 }
 
 .employee-card > p {
     letter-spacing: 0.1rem;
-    margin-left: 1.5rem;
+    width: 12rem;
 }
 
 .employee-figure {
@@ -263,4 +279,10 @@ button:active {
     margin-bottom: 1rem;
     margin-left: 0;
 }
-/* Footer */
+
+@media only screen and (max-width: 1584px) and (min-width: 1034px){
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
